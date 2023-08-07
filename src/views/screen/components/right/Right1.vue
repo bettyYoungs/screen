@@ -79,5 +79,8 @@ const option = ref({
 .es-block {
 	width: 100%;
 	height: 100%;
+	background-image: url('@/assets/images/right-1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 </style>

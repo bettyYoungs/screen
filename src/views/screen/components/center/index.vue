@@ -1,6 +1,12 @@
 <template>
 	<div class="es-center">
 		<div class="es-center-top">
+			<div class="es-center-flip-bg">
+				<!-- <div class="es-center-flip-title">
+					当年承保费
+				</div>
+				<Flip /> -->
+			</div>
 			<Map />
 		</div>
 		<Bottom />
@@ -23,6 +29,18 @@ import Bottom from './Bottom.vue'
 	animation: slideAndFade 1.5s;
 	.es-center-top {
 		height: calc(100% - 150px);
+	}
+	&-flip-title {
+		font-size: 28px;
+		font-weight: bold;
+		text-align: center;
+		padding: 16px;
+		text-shadow: #0075FF 5px 0 8px;
+	}
+	&-flip-bg {
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-image: url('@/assets/images/flip.png');
 	}
 }
 

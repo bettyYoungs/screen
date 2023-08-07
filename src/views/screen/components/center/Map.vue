@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block">
-		<Title>商家分布</Title>
-    <div style="width: 100%;height: 98%;">
+		<!-- <Title>分支机构当日承保情况</Title> -->
+    <div style="width: 100%;height: 50%;">
 			<Chart :option="option" />
 		</div>
 	</div>
@@ -57,6 +57,9 @@ const option = ref({
 	width: 100%;
 	height: 100%;
 	padding: 16px;
+	background-image: url('@/assets/images/center-1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
 	// background-color: var(--es-block-bg);
 }
 </style>

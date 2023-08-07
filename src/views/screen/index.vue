@@ -35,9 +35,9 @@ const { screenRef } = useResize()
 .es-screen-container {
 	--es-screen-width: 1920px;
   --es-screen-height: 1080px;
-	--es-header-height: 300px;
-	--es-block-bg: #222733;
-	--es-screen-bg: rgb(22, 21, 34);
+	--es-header-height: 80px;
+	--es-block-bg: #rgba(3,24,36,.8);
+	--es-screen-bg: rgb(4, 6, 8);
 	--es-screen-text-color: #fff;
 	position: relative;
 	margin: 0;
@@ -56,7 +56,7 @@ const { screenRef } = useResize()
   width: var(--es-screen-width);
   height: var(--es-screen-height);
 	background-color: #252F38;
-	background-image: url('@/assets/images/screen/bg.png');
+	background-image: url('@/assets/images/bg.png');
   margin-left: calc(var(--es-screen-width) * 0.5 - var(--es-screen-width));
   margin-top: calc(var(--es-screen-height) * 0.5 - var(--es-screen-height));
   background-size: 100% 100%;
@@ -71,7 +71,7 @@ const { screenRef } = useResize()
 		width: calc(var(--es-screen-width) - 1000px);
 	}
 	&-left, &-right {
-		width: 460px;
+		width: 490px;
 	}
 }
 .light {

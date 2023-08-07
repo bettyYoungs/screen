@@ -18,7 +18,7 @@ import { KnifeFork, IceTea, Coffee, IceCream, Dessert, GobletFull } from '@eleme
 import SeamlessScroll from '@/components/SeamlessScroll.vue'
 const iconObj = {KnifeFork, IceTea, Coffee, IceCream, Dessert, GobletFull}
 const actions = ref([
-  { color: 'rgb(24, 144, 255)', icon: 'KnifeFork', value: 0 },
+  { color: '#3ceefd', icon: 'KnifeFork', value: 0 },
   { color: 'rgb(255, 192, 105)', icon: 'IceTea', value: 0 },
   { color: 'rgb(92, 219, 211)', icon: 'Coffee', value: 0 },
   { color: 'rgb(179, 127, 235)', icon: 'IceCream', value: 0 },

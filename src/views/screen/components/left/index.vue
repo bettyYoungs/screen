@@ -1,5 +1,5 @@
 <template>
-	<div ref="containerRef">
+	<div ref="containerRef" class="es-screen-left-container">
 		<component
 			v-for="item in components"
 			:key="item.name"
@@ -18,30 +18,39 @@ import { useSortable } from '@/utils/useSortable'
 
 import Left1 from './Left1.vue'
 import Left2 from './Left2.vue'
+
+
 const components = shallowRef([
 	{ name: 'left1', component: Left1 },
-	{ name: 'left2', component: Left2 }
+	{ name: 'left2', component: Left2 },
 ])
 
 const { containerRef } = useSortable(components)
 </script>
 
 <style lang='scss' scoped>
+.es-screen-left-container {
+	position: relative;
+	height: 100%;
+	background-color: rgba(0,59,104,0.21);
+	backdrop-filter: blur(10px);
+}
 .es-screen-left-item {
+	position: absolute;
 	width: 100%;
-	height: 430px;
+	height: 320px;
 	background-color: var(--es-block-bg);
-	padding: 16px;
 	animation-name: slide;
 
 	& + & {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 	&:nth-child(1) {
-		height: 550px;
+		height: 60%;
 		animation-duration: .8s;
 	}
 	&:nth-child(2) {
+		height: 38%;
 		animation-duration: 1.5s;
 	}
 }
