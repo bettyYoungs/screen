@@ -52,7 +52,7 @@ export default {
         fontSize: 18,
         lineHeight: 26,
         color: '#e6f7ff',
-        realValue: false,
+        realValue: true,
         digits: 1,
         offsetY: 4,
         offsetX: 0,
@@ -67,12 +67,6 @@ export default {
         lineHeight: 26,
         color: '#e6f7ff',
         offsetY: 4,
-      },
-      assist: {
-        url: 'images/backgroundImage',
-        width: 69,
-        height: 54,
-        offsetTop: -54,
       },
       position: {
         position: 'adaptive',

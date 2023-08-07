@@ -1,85 +1,95 @@
 <template>
 	<div class="es-block">
 		<Title>热销商品的占比</Title>
-    <div style="width: 100%;height: 90%;">
+		<div style="width: 100%; height: 82%">
 			<Chart :option="option" />
 		</div>
 	</div>
 </template>
 
-<script setup lang='ts'>
-import { ref } from 'vue'
-import Title from '../Title.vue'
-import Chart from '@/components/chart/Chart.vue'
-import allData from '@/assets/data/hot.json'
+<script setup lang="ts">
+import { ref } from "vue";
+import Title from "../Title.vue";
+import Chart from "@/components/chart/Chart.vue";
+import allData from "@/assets/data/hot.json";
 
-const currentIndex = ref(0)
+const currentIndex = ref(0);
 const option = ref({
+	color: [
+		"rgba(30,231,231,.8)",
+		"rgba(24,144,255,.8)",
+		"rgba(37,102,253,0.8)",
+		"rgba(19, 98, 115, 0.9)",
+		"rgba(97, 227, 255,0.9)",
+		"rgba(22, 242, 217, 0.9)",
+	],
 	grid: {
-		containLabel: false,
+		left: "6%",
+		top: "2%",
+		right: "6%",
+		bottom: "4%",
+		containLabel: true,
 	},
 	legend: {
-		bottom: '0%',
-		icon: 'circle',
-		data: allData[currentIndex.value].children.map(item => {
-			return item.name
-		}),
+		top: 4,
 		textStyle: {
-			color: '#aaa'
-		}
+			color: "#BAE7FF",
+		},
+		data: allData[currentIndex.value].children.map((item) => {
+			return item.name;
+		}),
 	},
 	tooltip: {
 		show: true,
-		formatter: arg => {
+		formatter: (arg) => {
 			// console.log(arg)
-			const thirdCategory = arg.data.children
+			const thirdCategory = arg.data.children;
 			// 计算出所有三级分类的数值总和
-			let total = 0
-			thirdCategory.forEach(item => {
-				total += item.value
-			})
-			let retStr = ''
-			thirdCategory.forEach(item => {
+			let total = 0;
+			thirdCategory.forEach((item) => {
+				total += item.value;
+			});
+			let retStr = "";
+			thirdCategory.forEach((item) => {
 				retStr += `
-				${item.name}:${Number(item.value / total * 100) + '%'}
+				${item.name}:${Number((item.value / total) * 100) + "%"}
 				<br/>
-				`
-			})
-			return retStr
-		}
+				`;
+			});
+			return retStr;
+		},
 	},
 	series: [
 		{
-			type: 'pie',
+			type: "pie",
 			label: {
-				show: false
+				show: false,
 			},
 			emphasis: {
 				label: {
-					show: true
+					show: true,
 				},
 				labelLine: {
-					show: false
-				}
+					show: false,
+				},
 			},
-			data: allData[currentIndex.value].children.map(item => {
-        return {
-          name: item.name,
-          value: item.value,
-          children: item.children // 新增加children的原因是为了在tooltip中的formatter的回调函数中,来拿到这个二级分类下的三级分类数据
-        }
-      })
-		}
-	]
-})
-
+			data: allData[currentIndex.value].children.map((item) => {
+				return {
+					name: item.name,
+					value: item.value,
+					children: item.children, // 新增加children的原因是为了在tooltip中的formatter的回调函数中,来拿到这个二级分类下的三级分类数据
+				};
+			}),
+		},
+	],
+});
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .es-block {
 	width: 100%;
 	height: 100%;
-	background-image: url('@/assets/images/right-1.png');
+	background-image: url("@/assets/images/right-1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }

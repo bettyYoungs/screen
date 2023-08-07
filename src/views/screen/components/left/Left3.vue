@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block1">
 		<Title>投保率</Title>
-		<div style="width: 100%; height: 85%;">
+		<div style="width: 100%; height: 70%">
 			<Chart :option="option" />
 		</div>
 	</div>
@@ -17,10 +17,10 @@ import * as echarts from 'echarts'
 const barWidth = 22
 const option = ref({
 	grid: {
-		top: '10%',
+		top: '1%',
 		left: '5%',
 		right: '10%',
-		bottom: '5%',
+		bottom: '8%',
 		containLabel: true // 距离是包含坐标轴上的文字
 	},
 	xAxis: {
@@ -60,11 +60,11 @@ const option = ref({
 				color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
 					{
 						offset: 0,
-						color: '#5052EE'
+						color: 'rgba(24, 144, 255, 0.35)'
 					},
 					{
 						offset: 1,
-						color: '#AB6EE5'
+						color: 'rgba(24, 144, 255, 1)'
 					}
 				])
 			},
@@ -80,8 +80,9 @@ const option = ref({
 <style lang='scss' scoped>
 .es-block1 {
 	width: 100%;
-	bottom: 8px;
-	top: 620px;
-	height: 385px
+	// bottom: 8px;
+	// top: 620px;
+	flex: 1
+	// height: 
 }
 </style>

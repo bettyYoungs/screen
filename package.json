@@ -1,11 +1,11 @@
 {
-  "name": "es-big-screen",
+  "name": "big-screen",
   "version": "0.0.0",
   "type": "module",
   "description": "big screen visualization project based on vue3 + echarts + amap(AMAP) + pinia, supporting drag and drop layout",
-  "homepage": "https://github.com/vangleer/es-big-screen",
+  "homepage": "https://github.com/bettyYoungs/screen",
   "bugs": {
-    "url": "https://github.com/vangleer/es-big-screen/issues"
+    "url": "https://github.com/bettyYoungs/screen/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -23,7 +23,6 @@
     "dayjs": "^1.11.8",
     "echarts": "^5.4.2",
     "element-plus": "^2.3.7",
-    "es-drager": "^0.3.5",
     "lodash": "^4.17.21",
     "odometer": "^0.4.8",
     "pinia": "^2.1.3",

@@ -27,9 +27,9 @@ const colorArr2 = [
 const option = ref({
 	color: colorArr2,
 	grid: {
-		left: '3%',
+		left: '6%',
 		top: '2%',
-		right: '4%',
+		right: '6%',
 		bottom: '10%',
 		containLabel: true
 	},
