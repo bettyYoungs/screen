@@ -95,127 +95,125 @@ function checkData(data) {
 	}
 }
 export default {
-	name: "gridProgress",
-	computed: {
-		width() {
-			const el = this.$refs.content;
-			const w = el.offsetWidth || 0;
-			const width = Math.floor(w) || LdataConfig.option.component.width;
-			return width;
-		},
-		textStyle() {
-			const textStyle = this.option.text;
-			return {
-				fontFamily: textStyle.fontFamily,
-				fontWeight: textStyle.fontWeight,
-				fontStyle: textStyle.fontStyle,
-				fontSize: `${textStyle.fontSize}px`,
-				lineHeight: `${textStyle.lineHeight}px`,
-				color: textStyle.color,
-				top: `${textStyle.offsetY}px`,
-				paddingLeft: `${textStyle.offsetX}px`,
-			};
-		},
-		component() {
-			return LdataConfig.option.component;
-		},
-		width() {
-			return this.component?.width || LdataConfig.option.component.width;
-		},
-		assistBg() {
-			const assist = this.option.assist;
-			const position = this.option.position;
-			let style = {};
-			switch (position.position) {
-				case "left":
-					style = {
-						...style,
-						position: "absolute",
-						right: `${position.offsetX}px`,
-						top: `${position.offsetY}px`,
-					};
-					break;
-				case "right":
-					style = {
-						...style,
-						position: "absolute",
-						left: `${position.offsetX}px`,
-						top: `${position.offsetY}px`,
-					};
-					break;
-				default:
-					break;
-			}
-			return {
-				...style,
-				backgroundRepeat: "no-repeat",
-				backgroundPosition: "0% 0%",
-				// backgroundImage: `url(${assist.url || '/img/border/backgroundImage.png'})`,
-				backgroundImage: `url(${assist.url})`,
-				width: `${assist.width}px`,
-				height: `${assist.height}px`,
-				backgroundSize: `${assist.width}px ${assist.height}px`,
-			};
-		},
-		assistWrapStyle() {
-			const ass = this.option.assist;
-			const position = this.option.position;
-			let left = 0;
-			let top = 0;
-			switch (position.position) {
-				case "left":
-					left = `-100%`;
-					top = 0;
-					break;
-				case "right":
-					left = `100%`;
-					top = 0;
-					break;
-				default:
-					top = ass.offsetTop;
-					left = 0;
-					break;
-			}
-			return {
-				left: left,
-				top: `${top}px`,
-			};
-		},
-		labelStyle() {
-			const unit = this.option.unit;
-			return {
-				fontFamily: unit.fontFamily,
-				fontSize: `${unit.fontSize}px`,
-				lineHeight: `${unit.lineHeight}px`,
-				fontWeight: unit.fontWeight,
-				fontStyle: unit.fontStyle,
-				color: unit.color,
-				top: `${+unit.offsetY + +this.option.grid.height + 8}px`,
-			};
-		},
-		rectWidth() {
-			const width = this.option.grid.width * 2;
-			return width;
-		},
-		realWidth() {
-			return this.rectWidth - this.rectWidth * this.option.grid.space;
-		},
-		rxs() {
-			let rxArr = [];
-			this.$nextTick(() => {
-				const el = this.$refs.content;
-				const w = el.offsetWidth || 0;
-				const width = Math.floor(w) || LdataConfig.option.component.width;
-				const arrLength = Math.floor(width / this.rectWidth);
-				console.log(width, "w");
-				for (let i = 0; i < arrLength; i++) {
-					rxArr.push(i * this.rectWidth);
-				}
-			});
-			return rxArr;
-		},
-	},
-
+  name: 'gridProgress',
+  computed: {
+    width() {
+      const el = this.$refs.content
+      const w = el.offsetWidth || 0
+      const width = Math.floor(w) || LdataConfig.option.component.width
+      return width
+    },
+    textStyle() {
+      const textStyle = this.option.text;
+      return {
+        fontFamily: textStyle.fontFamily,
+        fontWeight: textStyle.fontWeight,
+        fontStyle: textStyle.fontStyle,
+        fontSize: `${textStyle.fontSize}px`,
+        lineHeight: `${textStyle.lineHeight}px`,
+        color: textStyle.color,
+        top: `${textStyle.offsetY}px`,
+        paddingLeft: `${textStyle.offsetX}px`,
+      };
+    },
+    component() {
+      return LdataConfig.option.component
+    },
+    width() {
+      return this.component?.width || LdataConfig.option.component.width
+    },
+    assistBg() {
+      const assist = this.option.assist;
+      const position = this.option.position;
+      let style = {};
+      switch (position.position) {
+        case 'left':
+          style = {
+            ...style,
+            position: 'absolute',
+            right: `${position.offsetX}px`,
+            top: `${position.offsetY}px`,
+          };
+          break;
+        case 'right':
+          style = {
+            ...style,
+            position: 'absolute',
+            left: `${position.offsetX}px`,
+            top: `${position.offsetY}px`,
+          };
+          break;
+        default:
+          break;
+      }
+      return {
+        ...style,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '0% 0%',
+        // backgroundImage: `url(${assist.url || '/img/border/backgroundImage.png'})`,
+        backgroundImage: `url(${assist.url})`,
+        width: `${assist.width}px`,
+        height: `${assist.height}px`,
+        backgroundSize: `${assist.width}px ${assist.height}px`,
+      };
+    },
+    assistWrapStyle() {
+      const ass = this.option.assist;
+      const position = this.option.position;
+      let left = 0;
+      let top = 0;
+      switch (position.position) {
+        case 'left':
+          left = `-100%`;
+          top = 0;
+          break;
+        case 'right':
+          left = `100%`;
+          top = 0;
+          break;
+        default:
+          top = ass.offsetTop;
+          left = 0;
+          break;
+      }
+      return {
+        left: left,
+        top: `${top}px`,
+      };
+    },
+    labelStyle() {
+      const unit = this.option.unit;
+      return {
+        fontFamily: unit.fontFamily,
+        fontSize: `${unit.fontSize}px`,
+        lineHeight: `${unit.lineHeight}px`,
+        fontWeight: unit.fontWeight,
+        fontStyle: unit.fontStyle,
+        color: unit.color,
+        top: `${+unit.offsetY + +this.option.grid.height + 8}px`,
+      };
+    },
+    rectWidth() {
+      const width = this.option.grid.width * 2;
+      return width;
+    },
+    realWidth() {
+      return this.rectWidth - this.rectWidth * this.option.grid.space;
+    },
+    rxs() {
+      let rxArr = [];
+      this.$nextTick(() => {
+        const el = this.$refs.content
+        const w = el.offsetWidth || 0
+        const width = w || LdataConfig.option.component.width
+        const arrLength = Math.floor(width / this.rectWidth);
+        for (let i = 0; i < arrLength; i++) {
+          rxArr.push(i * this.rectWidth);
+        }
+      })
+      return rxArr;
+    },
+  },
 	data() {
 		return {
 			svgId: "grid-svg" + new Date().getTime(),

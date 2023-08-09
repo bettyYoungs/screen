@@ -30,7 +30,8 @@
     "sortablejs": "^1.15.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.1",
-    "vue3-odometer": "^0.1.3"
+    "vue3-odometer": "^0.1.3",
+    "vue3-seamless-scroll": "^2.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

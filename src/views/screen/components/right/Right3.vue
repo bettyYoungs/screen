@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block">
 		<Title>地区销售排行</Title>
-    <div style="width: 100%;height: 90%;">
+		<div style="width: 100%;height: 90%;">
 			<Chart :option="option" />
 		</div>
 	</div>
@@ -14,9 +14,9 @@ import Chart from '@/components/chart/Chart.vue'
 import allData from '@/assets/data/rank.json'
 import * as echarts from 'echarts'
 const colorArr = [
-	['#0BA82C', '#4FF778'],
-	['#2E72BF', '#23E5E5'],
-	['#5052EE', '#AB6EE5']
+	['rgba(142,231,255,1)', 'rgba(95,221,255,0.55)'],
+	['rgba(75, 255, 242, 0.31)', 'rgba(43,232,255,1)'],
+	['rgba(120, 102, 255, 0.6)', 'rgba(50,139,253,1)'] //紫色
 ]
 const startValue = ref(0)
 const endValue = ref(9)
@@ -55,7 +55,7 @@ const option = ref({
 			itemStyle: {
 				borderRadius: [barWidth / 2, barWidth / 2, 0, 0],
 				color: arg => {
-					let targetColorArr: string[] | null  = null
+					let targetColorArr: string[] | null = null
 					if (arg.value > 300) {
 						targetColorArr = colorArr[0]
 					} else if (arg.value > 200) {

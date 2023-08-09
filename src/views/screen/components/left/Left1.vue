@@ -18,7 +18,7 @@ import allData from '@/assets/data/trend.json'
 import * as echarts from 'echarts'
 const choiceType = 'map'
 const colorArr2 = [
-	'rgba(115, 55, 66, 0.9)',
+	'rgba(99, 130, 112, 0.9)',
 	'rgba(24, 144, 255, 0.9)',
 	'rgba(19, 98, 115, 0.9)',
 	'rgba(97, 227, 255,0.9)',
@@ -71,7 +71,7 @@ const option = ref({
 
 function getSeries() {
 	const colorArr1 = [
-		'rgba(115, 55, 66, 0.35)',
+		'rgba(99, 130, 112, 0.35)',
 		'rgba(24, 144, 255, 0.35)',
 		'rgba(19, 98, 115, 0.35)',
 		'rgba(97, 227, 255,0.35)',
@@ -85,30 +85,30 @@ function getSeries() {
 			name: item.name,
 			type: 'line',
 			data: item.data,
-			stack: choiceType,
+			// stack: choiceType,
 			itemStyle: {
 				borderWidth: 1
 			},
 			lineStyle: {
-				width: 1,
+				width: 2,
 				color: colorArr1[index]
 			},
-			symbolSize: 0,
+			symbolSize: 4,
 			symbol: 'circle',
-			smooth: true,
-			areaStyle: {
-				color: new echarts.graphic.LinearGradient(0, 0, 0, 1,
-					[{
-						offset: 0,
-						color: colorArr1[index]
-					}, // %0的颜色值
-					{
-						offset: 1,
-						color: colorArr2[index]
-					}
-					]
-				)
-			}
+			// smooth: true,
+			// areaStyle: {
+			// 	color: new echarts.graphic.LinearGradient(0, 0, 0, 1,
+			// 		[{
+			// 			offset: 0,
+			// 			color: colorArr1[index]
+			// 		}, // %0的颜色值
+			// 		{
+			// 			offset: 1,
+			// 			color: colorArr2[index]
+			// 		}
+			// 		]
+			// 	)
+			// }
 		}
 	})
 

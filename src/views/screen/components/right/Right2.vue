@@ -16,23 +16,32 @@ import * as echarts from "echarts";
 
 const currentIndex = ref(0);
 const option = ref({
+	grid: {
+		left: '6%',
+		top: '2%',
+		right: '6%',
+		bottom: '10%',
+		containLabel: true
+	},
 	series: getSeries(),
 });
 
 function getSeries() {
 	const centerArr = [
-		["18%", "40%"],
-		["50%", "40%"],
-		["82%", "40%"],
-		["34%", "75%"],
-		["66%", "75%"],
+		["18%", "20%"],
+		["50%", "20%"],
+		["82%", "20%"],
+		["34%", "65%"],
+		["66%", "65%"],
 	];
 	const colorArr = [
-		["#4FF778", "#0BA82C"],
+		// ["#4FF778", "#0BA82C"],
+		['rgba(142,231,255,1)', 'rgba(95,221,255,0.55)'],
 		["#E5DD45", "#E8B11C"],
 		["#E8821C", "#E55445"],
 		["#5052EE", "#AB6EE5"],
-		["#23E5E5", "#2E72BF"],
+		// ["#23E5E5", "#2E72BF"],
+		['rgba(75, 255, 242, 0.31)', 'rgba(43,232,255,1)']
 	];
 	// 处理图表需要的数据
 	const start = currentIndex.value * 5;

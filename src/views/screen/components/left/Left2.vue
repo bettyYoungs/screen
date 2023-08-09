@@ -2,11 +2,11 @@
 	<div class="es-block">
 		<Title>当年承保单量</Title>
 		<div style="width: 100%; height: 90%;" class="es-left-bottom">
-			<GridProgress :option="option" title="投保率" :data="{
+			<GridProgress key="0" :option="option" title="投保率" :data="{
 				value: 7,
 				max: 10
 			}" />
-			<GridProgress :option="option" title="投保率" :data="{
+			<GridProgress key="1" :option="option" title="投保率" :data="{
 				value: 8,
 				max: 10
 			}" />

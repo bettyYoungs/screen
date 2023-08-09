@@ -42,7 +42,6 @@ const option = ref({
 	tooltip: {
 		show: true,
 		formatter: (arg) => {
-			// console.log(arg)
 			const thirdCategory = arg.data.children;
 			// 计算出所有三级分类的数值总和
 			let total = 0;
