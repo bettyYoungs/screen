@@ -7,7 +7,7 @@ const pathResolve = (dir: string): string => {
 export default defineConfig(({ mode }) => {
   return {
     plugins: [vue()],
-    base: mode === 'production' ? '/es-big-screen' : '',
+    // base: mode === 'production' ? '/es-big-screen' : '',
 		resolve: {
 			alias: {
 				'@': pathResolve('src')

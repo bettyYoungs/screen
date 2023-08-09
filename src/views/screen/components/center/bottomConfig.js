@@ -81,7 +81,6 @@ export const data = 	[
     desc: '前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发',
     // time: dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'),
     tags: '测试，美观',
-    imgUrl: '/resource/img/logo.png',
   },
   {
     title: 'test标题',
@@ -89,7 +88,6 @@ export const data = 	[
     desc: '前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发',
     // time: dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'),
     tag: '测试，美观',
-    imgUrl: '/resource/img/logo.png',
   },
   {
     title: 'test标题',
@@ -97,7 +95,6 @@ export const data = 	[
     desc: '前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发,前端搬砖神器,让数据驱动视图,更加贴合企业开发',
     // time: dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'),
     tags: '测试，美观',
-    imgUrl: '/resource/img/logo.png',
   },
 ]
 export const seriesColors = [
