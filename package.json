@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "description": "big screen visualization project based on vue3 + echarts + amap(AMAP) + pinia, supporting drag and drop layout",
-  "homepage": "https://github.com/bettyYoungs/screen",
+  "homepage": "https://bettyyoungs.github.io/screen/",
   "bugs": {
     "url": "https://github.com/bettyYoungs/screen/issues"
   },
