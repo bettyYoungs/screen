@@ -1,6 +1,6 @@
 <template>
 	<div class="es-block">
-		<Title>地区销售排行</Title>
+		<Title>近期承保单量</Title>
 		<div style="width: 100%;height: 90%;">
 			<Chart :option="option" />
 		</div>

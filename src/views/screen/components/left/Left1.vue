@@ -2,7 +2,7 @@
 	<div class="es-block">
 		<img src="@/assets/images/right-1.png" class="es-top-img" />
 		<Left0 />
-		<Title>近期承保单量</Title>
+		<Title>明星产品</Title>
 		<div style="width: 100%; height: 50%;">
 			<Chart :option="option" />
 		</div>

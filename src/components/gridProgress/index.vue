@@ -387,7 +387,7 @@ export default {
 	}
 
 	&-title {
-		width: 80px;
+		width: 100px;
 	}
 
 	&-content {

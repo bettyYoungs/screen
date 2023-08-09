@@ -1,11 +1,13 @@
 <template>
 	<div class="es-center">
 		<div class="es-center-top">
+			<Title>分支机构当日承保情况</Title>
 			<Map />
 		</div>
 		<div class="es-center-bottom">
 			<img src="@/assets/images/left-2.png" class="es-center-bottom-img" />
 			<div class="es-center-bottom-item-chart">
+				<Title>API调用量</Title>
 				<Chart :option="option" />
 			</div>
 			<div class="es-center-bottom-item-scroll">

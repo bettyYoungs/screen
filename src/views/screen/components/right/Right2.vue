@@ -1,6 +1,6 @@
 <template>
 	<div class="es-block">
-		<Title>库存和销量分析</Title>
+		<Title>承保分析</Title>
 		<div style="width: 100%; height: 90%">
 			<Chart :option="option" />
 		</div>

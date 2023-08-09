@@ -1,14 +1,14 @@
 <template>
 	<div class="es-block0">
-		<Title>整体形势</Title>
+		<Title>承保统计</Title>
 		<div class="es-screen-text-container">
 			<div class="es-screen-text">
-				<CustomText textValue="全年运行天数" />
-				<CountTo :data="2017" :option="flip1Option" />
+				<CustomText textValue="当年承保单量" />
+				<CountTo :data="166" :option="flip1Option" />
 			</div>
 			<div class="es-screen-text">
-				<CustomText textValue="全年无事故率" />
-				<CountTo :data="166" suffix="rmb" :option="flip2Option" />
+				<CustomText textValue="当年承保费" />
+				<CountTo :data="2017" suffix="rmb" :option="flip2Option" />
 			</div>
 		</div>
 	</div>
@@ -35,7 +35,7 @@ const flip1Option = {
 	},
 	suffix: {
 		offsetY: 12,
-		text: '天'
+		text: '单'
 	}
 }
 
@@ -50,13 +50,13 @@ const flip2Option = {
 		fontSize: 42,
 		duration: 2,
 		intervals: 10,
-		offsetX: 20,
+		offsetX: 0,
 		animation: true,
 		fontStyle: 'oblique'
 	},
 	suffix: {
 		offsetY: 12,
-		text: '%'
+		text: '万元'
 	}
 }
 </script>
