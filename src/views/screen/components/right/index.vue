@@ -9,13 +9,13 @@
 <script setup lang='ts'>
 import { shallowRef } from 'vue'
 import { useSortable } from '@/utils/useSortable'
-import Right1 from './Right1.vue'
+import Right4 from './Right1.vue'
 import Right2 from './Right2.vue'
-import Right3 from './Right3.vue'
+import Right1 from './Right4.vue'
 const components = shallowRef([
 	{ name: 'right1', component: Right1 },
 	{ name: 'right2', component: Right2 },
-	{ name: 'right3', component: Right3 }
+	{ name: 'right3', component: Right4 }
 ])
 
 const { containerRef } = useSortable(components)
@@ -48,7 +48,7 @@ const { containerRef } = useSortable(components)
 		}
 
 		&+& {
-			margin-top: 20px;
+			margin-top: 10px;
 		}
 	}
 }

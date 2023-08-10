@@ -1,8 +1,8 @@
 <template>
 	<div class="es-block">
 		<img src="@/assets/images/center-1.png" class="es-center-top-img" />
-		<!-- <Title>分支机构当日承保情况</Title> -->
-    <div style="width: 100%;height: 100%;">
+		<Title><p style="margin-left: 16px;">分支机构当日承保情况</p></Title>
+    <div style="width: 100%; height: 86%;">
 			<Chart :option="option" />
 		</div>
 	</div>

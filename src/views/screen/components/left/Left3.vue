@@ -1,5 +1,5 @@
 <template>
-	<div class="es-block1">
+	<div class="es-block">
 		<Title>投保率</Title>
 		<div style="width: 100%; height: 70%">
 			<Chart :option="option" />
@@ -78,7 +78,7 @@ const option = ref({
 </script>
 
 <style lang='scss' scoped>
-.es-block1 {
+.es-block {
 	width: 100%;
 	// bottom: 8px;
 	// top: 620px;

@@ -1,7 +1,6 @@
 <template>
 	<div class="es-center">
 		<div class="es-center-top">
-			<Title>分支机构当日承保情况</Title>
 			<Map />
 		</div>
 		<div class="es-center-bottom">
@@ -20,6 +19,7 @@
 
 <script setup lang='ts'>
 // import AMap from './AMap.vue'
+import Title from '../Title.vue'
 import Map from './Map.vue'
 import Chart from '@/components/chart/Chart.vue'
 import Bottom from './Bottom.vue'
@@ -321,12 +321,12 @@ const component = ref({
 	animation: slideAndFade 1.5s;
 
 	.es-center-top {
-		height: 56%;
+		height: 60%;
 	}
 
 	&-bottom {
 		display: flex;
-		height: 44%;
+		height: 40%;
 		margin-top: 8px;
 		position: relative;
 

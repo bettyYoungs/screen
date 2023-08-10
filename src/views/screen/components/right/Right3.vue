@@ -1,9 +1,9 @@
 <template>
 	<div class="es-block">
-		<Title>近期承保单量</Title>
-		<div style="width: 100%;height: 90%;">
-			<Chart :option="option" />
-		</div>
+		<Title>明星产品</Title>
+    <div style="width: 100%; height: 80%;">
+      <Chart :option="option" />
+    </div>
 	</div>
 </template>
 

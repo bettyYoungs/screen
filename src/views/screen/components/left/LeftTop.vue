@@ -1,5 +1,5 @@
 <template>
-	<div class="es-block0">
+	<div class="es-block-top">
 		<Title>承保统计</Title>
 		<div class="es-screen-text-container">
 			<div class="es-screen-text">
@@ -61,7 +61,7 @@ const flip2Option = {
 }
 </script>
 <style scoped lang="scss">
-.es-block0 {
+.es-block-top {
 	height: 34%;
 }
 .es-screen-text {

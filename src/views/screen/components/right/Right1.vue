@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block">
 		<Title>热销商品的占比</Title>
-		<div style="width: 100%; height: 82%">
+		<div style="width: 100%; height: 76%">
 			<Chart :option="option" />
 		</div>
 	</div>
@@ -27,7 +27,7 @@ const option = ref({
 		left: "6%",
 		top: "2%",
 		right: "6%",
-		bottom: "4%",
+		bottom: "8%",
 		containLabel: true,
 	},
 	legend: {
