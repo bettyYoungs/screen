@@ -20,12 +20,38 @@ const colorArr2 = [
 	'rgba(97, 227, 255,0.9)',
 	'rgba(22, 242, 217, 0.9)'
 ]
+//返回最近七天的日期
+function doHandleMonth(month) {
+	let m = month;
+	if (month.toString().length == 1) {
+		m = "0" + month;
+	}
+	return m;
+}
+
+function getDays() {
+	let days = []
+	for(let i = 0; i>-5; i--){
+		const today = new Date();
+		const targetday_milliseconds = today.getTime() + 1000 * 60 * 60 * 24 * i;
+		today.setTime(targetday_milliseconds);
+		let tYear = today.getFullYear();
+		let tMonth = today.getMonth();
+		let tDate = today.getDate();
+		tMonth = doHandleMonth(tMonth + 1);
+		tDate = doHandleMonth(tDate);
+		days.unshift( tYear + "-" + tMonth + "-" + tDate)
+	}
+	return days
+}
+
+
 const option = ref({
 	color: colorArr2,
 	grid: {
 		left: '6%',
 		top: '2%',
-		right: '6%',
+		right: '8%',
 		bottom: '13%',
 		containLabel: true
 	},
@@ -33,6 +59,7 @@ const option = ref({
 		trigger: 'axis'
 	},
 	legend: {
+		show: false,
 		bottom: '4%',
 		icon: 'circle',
 		data: allData[choiceType].data,
@@ -43,7 +70,7 @@ const option = ref({
 	xAxis: {
 		type: 'category',
 		boundaryGap: false,
-		data: allData.common.month,
+		data: getDays(),
 		axisLine: {
 			lineStyle: {
 				color: '#BAE7FF'

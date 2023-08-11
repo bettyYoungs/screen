@@ -21,7 +21,7 @@ let option = ref({
 	grid: {
 		left: '6%',
 		top: '2%',
-		right: '6%',
+		right: '8%',
 		bottom: '10%',
 		containLabel: true
 	},
