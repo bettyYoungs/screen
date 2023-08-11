@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block">
 		<img src="@/assets/images/center-1.png" class="es-center-top-img" />
-		<Title><p style="margin-left: 16px;">分支机构当日承保情况</p></Title>
+		<Title><p style="margin-left: 30px;">分支机构当日承保情况</p></Title>
     <div style="width: 100%; height: 86%;">
 			<Chart :option="option" />
 		</div>
@@ -57,8 +57,8 @@ const option = ref({
 .es-block {
 	width: 100%;
 	height: 100%;
-	padding: 10px;
 	position: relative;
+	padding-top: 10px;
 	// background-image: url('@/assets/images/center-1.png');
 	background-repeat: no-repeat;
 	background-size:  100% auto;

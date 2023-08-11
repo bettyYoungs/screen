@@ -13,8 +13,6 @@ import LeftCenter from './LeftTopChart.vue'
 
 <style lang='scss' scoped>
 .es-block {
-	height: 100%;
-	top: 0;
 
 	.es-top-img {
 		position: absolute;

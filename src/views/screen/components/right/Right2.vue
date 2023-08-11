@@ -1,5 +1,5 @@
 <template>
-	<div class="es-block">
+	<div class="es-block-right-2">
 		<Title>承保分析</Title>
 		<div style="width: 100%; height: 90%">
 			<Chart :option="option" />
@@ -166,9 +166,9 @@ function getSeries() {
 </script>
 
 <style lang="scss" scoped>
-.es-block {
+.es-block-right-2 {
 	width: 100%;
-	height: 100%;
+	height: 31%;
 	background-image: url("@/assets/images/right-2.png");
 	background-repeat: no-repeat;
 	background-size: cover;

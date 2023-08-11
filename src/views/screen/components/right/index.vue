@@ -24,13 +24,17 @@ const { containerRef } = useSortable(components)
 <style lang='scss' scoped>
 .es-screen-right {
 	&-container {
-		background-color: rgba(0, 59, 104, 0.21);
-		backdrop-filter: blur(10px);
+		// background-color: rgba(0, 59, 104, 0.21);
+		// backdrop-filter: blur(10px);
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&-item {
 		width: 100%;
-		height: 320px;
+		// height: 320px;
 		background-color: var(--es-block-bg);
 		padding: 10px;
 		animation-name: slide;

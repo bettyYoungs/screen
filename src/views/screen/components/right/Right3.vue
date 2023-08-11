@@ -84,7 +84,7 @@ const option = ref({
 <style lang='scss' scoped>
 .es-block {
 	width: 100%;
-	height: 100%;
+	height: 40%;
 	background-image: url('@/assets/images/right-3.png');
 	background-repeat: no-repeat;
 	background-size: cover;

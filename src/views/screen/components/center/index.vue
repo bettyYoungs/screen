@@ -7,7 +7,9 @@
 			<img src="@/assets/images/left-2.png" class="es-center-bottom-img" />
 			<div class="es-center-bottom-item-chart">
 				<Title>API调用量</Title>
-				<Chart :option="option" />
+				<div style="width: 100%; height: 80%">
+					<Chart :option="option" />
+				</div>
 			</div>
 			<div class="es-center-bottom-item-scroll">
 				<Bottom :option="scrollListOption" :data="scrollData" :component="component" />
@@ -316,8 +318,8 @@ const component = ref({
 <style lang='scss' scoped>
 .es-center {
 	position: relative;
-	height: 1000px;
-	padding: 0 16px;
+	height: 100%;
+	padding: 0 10px;
 	animation: slideAndFade 1.5s;
 
 	.es-center-top {
@@ -326,7 +328,7 @@ const component = ref({
 
 	&-bottom {
 		display: flex;
-		height: 40%;
+		height: 38%;
 		margin-top: 8px;
 		position: relative;
 
@@ -361,4 +363,5 @@ const component = ref({
 		transform: translateX(0);
 		opacity: 1;
 	}
-}</style>
+}
+</style>

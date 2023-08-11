@@ -30,13 +30,10 @@ const { containerRef } = useSortable(components)
 .es-screen-left-container {
 	position: relative;
 	height: 100%;
-	background-color: rgba(0,59,104,0.21);
-	backdrop-filter: blur(10px);
 }
 .es-screen-left-item {
 	position: absolute;
 	width: 100%;
-	height: 320px;
 	background-color: var(--es-block-bg);
 	animation-name: slide;
 

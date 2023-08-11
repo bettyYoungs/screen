@@ -119,8 +119,6 @@ export const barConfig =  {
       color:'#BAE7FF',
       fontSize: 14,
       padding: 10, // 图形间距
-      // fontWeight: FontWeight.normal,
-      // fontFamily: FontFamily.default,
       fontStyle: 'normal', //italic
       lineHeight: 22,
     },

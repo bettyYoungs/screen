@@ -1,7 +1,7 @@
 <template>
 	<div class="es-block">
 		<Title>投保率</Title>
-		<div style="width: 100%; height: 70%">
+		<div style="width: 100%; height: 65%">
 			<Chart :option="option" />
 		</div>
 	</div>
@@ -80,9 +80,6 @@ const option = ref({
 <style lang='scss' scoped>
 .es-block {
 	width: 100%;
-	// bottom: 8px;
-	// top: 620px;
 	flex: 1
-	// height: 
 }
 </style>

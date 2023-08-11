@@ -1,5 +1,5 @@
 <template>
-	<div class="es-block">
+	<div class="es-block-right-1">
 		<Title>热销商品的占比</Title>
 		<div style="width: 100%; height: 76%">
 			<Chart :option="option" />
@@ -85,9 +85,9 @@ const option = ref({
 </script>
 
 <style lang="scss" scoped>
-.es-block {
+.es-block-right-1 {
 	width: 100%;
-	height: 100%;
+	height: 32%;
 	background-image: url("@/assets/images/right-1.png");
 	background-repeat: no-repeat;
 	background-size: cover;

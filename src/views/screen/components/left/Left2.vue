@@ -1,5 +1,5 @@
 <template>
-	<div class="es-block">
+	<div class="es-block-bottom-wrapper">
 		<Title>服务监控</Title>
 		<div style="width: 100%; height: 90%;" class="es-left-bottom">
 			<GridProgress key="0" :option="option" title="需求上线率" :data="{
@@ -23,7 +23,7 @@ import Left3 from './Left3.vue'
 </script>
 
 <style lang='scss' scoped>
-.es-block {
+.es-block-bottom-wrapper {
 	width: 100%;
 	height: 100%;
 	top: 60%;
